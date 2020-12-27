@@ -1,0 +1,35 @@
+CONFIG_NAME: '3stages'
+CUDA: True
+DATASET_NAME: 'face'
+EMBEDDING_TYPE: 'skip-thought'
+DATA_DIR: '/content/drive/MyDrive/StackGAN/Data/face/jpg'
+GPU_ID: '0'
+WORKERS: 0
+
+
+TREE:
+    BRANCH_NUM: 3
+
+
+GAN:
+    EMBEDDING_DIM: 256
+    DF_DIM: 64
+    GF_DIM: 64
+    Z_DIM: 100
+    R_NUM: 2
+    B_CONDITION: True
+    
+TRAIN:
+    FLAG: True
+    NET_G: '/content/drive/MyDrive/StackGAN-v2/output/face_418/Model/netG_32685.pth'  # '../output/birds_3stages/Model/netG_epoch_700.pth'
+    NET_D: '/content/drive/MyDrive/StackGAN-v2/output/face_418/Model/netD'  # '../output/birds_3stages/Model/netD'
+    BATCH_SIZE: 32
+    MAX_EPOCH: 600
+    SNAPSHOT_INTERVAL: 10
+    DISCRIMINATOR_LR: 0.0002
+    GENERATOR_LR: 0.0002
+    COEFF:
+      UNCOND_LOSS: 1.0
+
+TEXT:
+    DIMENSION: 4800
