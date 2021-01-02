@@ -36,11 +36,10 @@ The folder structure of the repo is explained below:
     - For training Stage-1, move into stage1 folder in StackGAN using cd command and run "python stage1_train.py"
     - For training Stage-2, move into stage2 folder in StackGAN using cd command and run "python stage2_train.py"
     
-- **Geerating Images from Captions**
+- **Generating Images from Captions**
 
     - Write the captions in a text file, and save them as demo_captions.txt. Generate the skip thought vectors for these captions.
     - Generate images corresponding to these captions using the thought vectors and run "python generate_images.py --model-path = <path to trained model>"
         
     
  
-
